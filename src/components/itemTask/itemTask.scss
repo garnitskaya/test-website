@@ -1,0 +1,15 @@
+@import '../../style';
+
+.task {
+    @extend %extend-item;
+
+    &:first-child {
+        border-bottom: none;
+    }
+}
+
+@include tablet() {
+    .task {
+        padding: 17px 20px;
+    }
+}

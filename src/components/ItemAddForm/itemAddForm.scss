@@ -1,0 +1,32 @@
+@import '../../style';
+
+.add-form {
+    @extend %extend-item;
+
+    &__input {
+        width: 90%;
+        font-weight: 600;
+        @include fz-14($black);
+
+        &::placeholder {
+            color: #C5C7CD;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__btn {
+        @include flex();
+        width: 24px;
+        height: 24px;
+        border-radius: 8px;
+    }
+}
+
+@include tablet() {
+    .add-form {
+        padding: 17px 20px;
+    }
+}

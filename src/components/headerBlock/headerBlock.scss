@@ -1,0 +1,28 @@
+@import '../../style';
+
+.header {
+    padding-top: 32px;
+    @include flex(unset);
+
+    &__title {
+        @include fz-24($black);
+        flex: 1;
+    }
+
+    .divider {
+        margin: 0 32px;
+        width: 1px;
+        height: 32px;
+        background-color: $grey-3;
+    }
+}
+
+@include mobil() {
+    .header {
+        padding-top: 20px;
+
+        .divider {
+            margin: 0 10px;
+        }
+    }
+}

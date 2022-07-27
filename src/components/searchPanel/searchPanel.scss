@@ -1,0 +1,28 @@
+@import '../../style';
+
+.search-panel {
+    margin-right: 19px;
+    position: relative;
+
+    &__input {
+        padding: 5px 22px 5px 7px;
+        margin-left: 5px;
+        width: 100%;
+        background-color: transparent;
+        display: none;
+    }
+
+    .active {
+        background-color: $white;
+        outline: none;
+        display: inline-block;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        cursor: text;
+    }
+}

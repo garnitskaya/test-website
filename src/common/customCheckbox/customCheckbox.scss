@@ -1,0 +1,49 @@
+@import '../../style';
+
+.checkbox {
+    margin-left: 36px;
+
+    &__item {
+        position: relative;
+        word-wrap: break-word;
+        cursor: pointer;
+
+        input {
+            display: none;
+        }
+
+        span {
+            margin-left: -36px;
+            position: absolute;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid $grey-1;
+            transition: $transition;
+
+            &:after {
+                content: '';
+                position: absolute;
+                display: none;
+                top: 3px;
+                left: 7px;
+                width: 5px;
+                height: 10px;
+                border: 2px solid $white;
+                border-top: 0;
+                border-left: 0;
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &__item input:checked+span {
+        background-color: $blue_1;
+        border: none;
+
+        &:after {
+            display: block;
+        }
+    }
+}

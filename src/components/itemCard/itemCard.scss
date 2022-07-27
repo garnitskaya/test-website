@@ -1,0 +1,62 @@
+@import '../../style';
+
+.card {
+    padding: 24px 32px;
+    width: 100%;
+    text-align: center;
+    background-color: $white;
+    border: 1px solid $grey-3;
+    border-radius: 8px;
+    transition: $transition;
+    cursor: pointer;
+
+    &__name {
+        @include fz-19($grey-2);
+
+    }
+
+    &__quantity {
+        margin-top: 12px;
+        @include fz-40($black);
+    }
+
+    &:hover {
+        border-color: $blue_1;
+        box-shadow: 0 0 0 2px $blue;
+
+        .card__name,
+        .card__quantity {
+            color: $blue_1;
+        }
+    }
+}
+
+@include tablet() {
+    .card {
+        padding: 20px;
+
+        &__name {
+            @include fz-16($grey-2, 700);
+        }
+
+        &__quantity {
+            @include fz-36($black);
+        }
+    }
+}
+
+@include mobil() {
+    .card {
+        padding: 10px;
+
+        &__name {
+            @include fz-14($grey-2, 700);
+        }
+
+        &__quantity {
+            margin-top: 5px;
+            font-size: 28px;
+            line-height: 34px;
+        }
+    }
+}

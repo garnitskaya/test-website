@@ -1,0 +1,106 @@
+@import '../../style';
+
+.user-block {
+    background: url('../../resources/img/bg.png') 0 0/100% 214px no-repeat;
+    padding: 130px 0;
+    position: relative;
+    margin-top: 30px;
+    background-color: $white;
+    border: 1px solid $grey-3;
+    border-radius: 8px;
+    overflow: hidden;
+
+
+    &__avatar {
+        @include flex();
+        flex-direction: column;
+
+    }
+
+    &__photo {
+        @include flex();
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid $white;
+
+        &>div {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+
+    &__name {
+        margin-top: 6px;
+        @include fz-36($black);
+    }
+
+    &__catch-phrase {
+        margin-top: 8px;
+        @include fz-24($grey-8);
+    }
+
+    &__descr {
+        margin-top: 75px;
+        padding: 0 53px;
+    }
+
+    &__subtitle {
+        @include fz-36($black);
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+
+        span,
+        a {
+            margin-top: 14px;
+            @include fz-16($black-1, 500, 0.4px);
+        }
+    }
+
+    &__subtitle &__link {
+        color: $blue_1;
+        text-decoration: solid;
+    }
+}
+
+@include mobil() {
+    .user-block {
+        padding: 66px 0;
+        background-size: 100% 150px;
+
+        &__name {
+            @include fz-24($black);
+        }
+
+        &__catch-phrase {
+            @include fz-16($grey-8, 700);
+        }
+
+        &__descr {
+            margin-top: 30px;
+            padding: 0 30px;
+        }
+
+        &__subtitle {
+            @include fz-24($black);
+            margin-bottom: 15px;
+
+            span,
+            a {
+                margin-top: 5px;
+                @include fz-16($black-1, 500, 0.4px);
+            }
+        }
+    }
+}

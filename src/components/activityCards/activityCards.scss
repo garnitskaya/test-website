@@ -1,0 +1,21 @@
+@import '../../style';
+
+.cards {
+    margin-top: 54px;
+    @include flex(space-between);
+    gap: 30px;
+}
+
+@include laptop() {
+    .cards {
+        margin-top: 34px;
+        gap: 20px;
+    }
+}
+
+@include mobil() {
+    .cards {
+        margin-top: 20px;
+        gap: 10px;
+    }
+}

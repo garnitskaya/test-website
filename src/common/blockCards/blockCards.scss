@@ -1,0 +1,58 @@
+@import '../../style';
+
+.cards-block {
+    padding-top: 32px;
+    flex: 1 1 50%;
+    background-color: $white;
+    border: 1px solid $grey-3;
+    border-radius: 8px;
+    max-height: 333px;
+    overflow: hidden;
+
+    &.active {
+        max-height: fit-content;
+        overflow: visible;
+    }
+
+    &__header {
+        padding: 0 32px;
+        @include flex(space-between, flex-start);
+    }
+
+    &__title {
+        @include fz-19($black);
+    }
+
+    &__subtitle {
+        margin-top: 8px;
+        @include fz-12($grey-2);
+        color: $grey-2;
+
+        span {
+            font-weight: 600;
+            @include fz-12($grey-6);
+        }
+    }
+
+    &__btn {
+        background-color: transparent;
+        font-weight: 600;
+        @include fz-14($blue_1);
+    }
+
+    &__list {
+        margin-top: 16px;
+        list-style: none;
+    }
+}
+
+@include tablet() {
+    .cards-block {
+        padding-top: 20px;
+        max-height: 321px;
+
+        &__header {
+            padding: 0 20px;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+$bg-grey-light: #F7F8FC;
+$bg-grey: #363740;
+$bg-grey-2: rgba(159, 162, 180, 0.08);
+
+$black: #252733;
+$black-1: #000000;
+$grey-1: #C5C7CD;
+$grey-2: #9FA2B4;
+$grey-3: #DFE0EB;
+$grey-4: #a4a6b3b3;
+$grey-5: #A4A6B3;
+$grey-6: #4B506D;
+$grey-7: #F0F1F7;
+$grey-8: #797A84;
+
+$blue: #DDE2FF;
+$blue_1: #3751FF;
+$blue_2: rgba(55, 81, 255, 0.04);
+
+$white: #ffffff;
+$green: #29CC97;
+$red: #F12B2C;
+$yellow: #FEC400;
+
+$transition: .4s all;
+
+$btn-map: (
+    'yellow'$yellow $white,
+    'red'$red $white,
+    'green'$green $white,
+    'default'$grey-7 $grey-2
+);
+
+$grid-columns: 1fr 210px 196px 104px;
+$grid-columns-1: 1fr 185px 150px 104px;
+$grid-columns-2: 1fr 185px 150px 55px;
+$grid-columns-3: 1fr 195px 55px;
+$grid-columns-4: 1fr;

@@ -1,0 +1,13 @@
+@import '../../style';
+
+.wrap {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+}
+
+@include tablet-portrait() {
+    .wrap {
+        flex-wrap: wrap;
+    }
+}

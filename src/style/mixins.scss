@@ -1,0 +1,60 @@
+@mixin fz-40($color) {
+    color: $color;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 1px;
+}
+
+@mixin fz-36($color) {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: 0.4px;
+    color: $color;
+}
+
+@mixin fz-24($color) {
+    color: $color;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.3px;
+}
+
+@mixin fz-19($color) {
+    color: $color;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+}
+
+@mixin fz-16($color, $fw: 400, $ls: 0.2px) {
+    font-weight: $fw;
+    color: $color;
+    letter-spacing: $ls;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+@mixin fz-14($color, $fw: 600, $lh: 20px) {
+    font-weight: $fw;
+    color: $color;
+    line-height: $lh;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+}
+
+@mixin fz-12($color) {
+    color: $color;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+}
+
+@mixin flex($justifyContent: center, $alignItems: center) {
+    display: flex;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+}

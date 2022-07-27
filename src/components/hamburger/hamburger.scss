@@ -1,0 +1,36 @@
+@import "../../style";
+
+
+@include tablet() {
+    .hamburger {
+        position: absolute;
+        top: 19px;
+        right: 19px;
+        z-index: 100;
+
+        &__active {
+            span {
+                &:nth-child(1) {
+                    transform: translateY(6px) rotate(45deg);
+                }
+
+                &:nth-child(2) {
+                    display: none;
+                }
+
+                &:nth-child(3) {
+                    transform: translateY(-1px) rotate(-45deg);
+                }
+            }
+        }
+
+        span {
+            display: block;
+            margin: 5px 0;
+            background: $white;
+            width: 30px;
+            height: 2px;
+            transition: $transition;
+        }
+    }
+}

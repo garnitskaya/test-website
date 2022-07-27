@@ -1,0 +1,24 @@
+@import '../../style';
+
+.sort {
+    @include flex(unset);
+    padding: 0 32px;
+    cursor: pointer;
+
+    &__title {
+        flex: 1;
+        @include fz-19($black);
+    }
+
+    &__item {
+        padding-left: 24px;
+        background: url('../../resources/icon/sort.svg') 0 2px no-repeat;
+        @include fz-14($grey-6);
+    }
+}
+
+@include laptop() {
+    .sort {
+        padding-left: 24px;
+    }
+}

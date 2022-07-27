@@ -1,0 +1,56 @@
+@import '../../style';
+
+.item {
+    position: relative;
+    color: $grey-5;
+
+    &~.divider {
+        margin: 16px 0;
+        height: 1px;
+        background-color: $grey-3;
+        opacity: 0.06;
+    }
+
+    & .active {
+        color: $blue;
+        background: $bg-grey-2 ;
+
+        &::before {
+            left: 0px;
+        }
+    }
+
+    & .active svg path {
+        fill: $blue;
+        opacity: 1;
+    }
+
+    &__link {
+        padding: 18px 32px;
+        display: inline-flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        @include fz-16(inherit);
+        transition: $transition;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 3px;
+            background-color: $blue;
+            left: -3px;
+            top: 0;
+            transition: $transition;
+        }
+
+        svg {
+            margin-right: 24px;
+
+            path {
+                transition: $transition;
+            }
+        }
+    }
+}

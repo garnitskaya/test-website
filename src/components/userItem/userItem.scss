@@ -1,0 +1,151 @@
+@import '../../style';
+
+.user {
+    position: relative;
+    padding: 24px 71px 24px 32px;
+    display: grid;
+    grid-template-columns: $grid-columns;
+    align-items: center;
+    gap: 40px;
+    border-top: 1px solid $grey-3;
+
+    &-improved {
+        grid-template-columns: $grid-columns-1;
+    }
+
+    &:hover {
+        transition: $transition;
+        background-color: $blue_2;
+    }
+
+    &__block {
+        @include flex(unset);
+        cursor: pointer;
+    }
+
+    &__photo {
+        margin-right: 24px;
+        min-width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__items {
+        overflow: hidden;
+
+        &:hover {
+            overflow: visible;
+        }
+
+        [data-description] {
+            position: relative;
+        }
+
+        [data-description]:after {
+            content: attr(data-description);
+            color: $white;
+            background: $grey-1;
+            padding: 7px;
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
+            bottom: 100%;
+            white-space: nowrap;
+            -webkit-transition: 0.25s linear opacity;
+            transition: 0.25s linear opacity;
+        }
+
+        [data-description]:hover:after {
+            left: 5px;
+            opacity: 1;
+        }
+    }
+
+    &__item {
+
+        &-top {
+            display: block;
+            @include fz-14($black);
+        }
+
+        &-bottom {
+            display: block;
+            margin-top: 4px;
+            @include fz-12($grey-1);
+        }
+    }
+
+    &__more {
+        position: absolute;
+        @include flex(space-between);
+        flex-direction: column;
+        top: 50%;
+        right: 38px;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+
+        span {
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background: $grey-1;
+            border-radius: 50%;
+        }
+    }
+}
+
+@include laptop() {
+    .user {
+        padding: 24px 45px 24px 24px;
+        gap: 15px;
+
+        &__photo {
+            margin-right: 15px;
+        }
+    }
+}
+
+@include tablet-portrait() {
+    .user {
+        grid-template-columns: $grid-columns-3;
+
+        &__items~.items {
+            display: none;
+        }
+    }
+}
+
+@include tablet() {
+    .user {
+        padding: 20px;
+        grid-template-columns: $grid-columns-3 ;
+
+        &__more {
+            right: 20px;
+        }
+    }
+}
+
+@include mobil() {
+    .user {
+        grid-template-columns: $grid-columns-4 ;
+
+        &__items.items {
+            display: none;
+        }
+
+        &__items.items~button {
+            display: none;
+        }
+
+    }
+}

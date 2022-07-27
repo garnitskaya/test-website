@@ -1,0 +1,11 @@
+@import '../../style';
+
+.app {
+    display: flex;
+}
+
+@include tablet() {
+    .app {
+        flex-direction: column;
+    }
+}

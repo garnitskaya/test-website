@@ -1,0 +1,78 @@
+@import '../../style';
+
+.users {
+    margin-top: 38px;
+    padding-top: 32px;
+    background-color: $white;
+    max-width: 100%;
+    min-height: 30vh;
+    border: 1px solid $grey-3;
+    border-radius: 8px;
+
+    &__category {
+        margin-top: 48px;
+        padding: 0 71px 0 32px;
+        display: grid;
+        grid-template-columns: $grid-columns;
+        @include fz-14($grey-2, 700, 18px);
+        gap: 40px;
+
+        &-improved {
+            grid-template-columns: $grid-columns-1;
+        }
+    }
+
+    &__block {
+        margin-top: 12px;
+    }
+}
+
+@include laptop() {
+    .users {
+        &__category {
+            margin-top: 30px;
+            padding: 0 45px 0 24px;
+            gap: 15px;
+        }
+    }
+}
+
+@include tablet-portrait() {
+    .users {
+        &__category {
+            grid-template-columns: $grid-columns-3;
+            padding: 0 45px 0 24px;
+            gap: 15px;
+
+            & li:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+}
+
+@include tablet() {
+    .users {
+        &__category {
+            grid-template-columns: $grid-columns-3;
+            padding: 0 20px 0 24px;
+        }
+    }
+}
+
+@include mobil() {
+    .users {
+        &__category {
+            grid-template-columns: $grid-columns-4;
+            padding: 0 20px 0 24px;
+
+            & li:nth-child(3) {
+                display: none;
+            }
+
+            & li:nth-child(4) {
+                display: none;
+            }
+        }
+    }
+}

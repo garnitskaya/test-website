@@ -1,0 +1,26 @@
+%extend-btn {
+    padding: 5px 12px;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border-radius: 100px;
+}
+
+%extend-item {
+    padding: 17px 32px;
+    max-height: max-content;
+    min-height: 59px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DFE0EB;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: $black;
+}

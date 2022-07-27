@@ -1,0 +1,23 @@
+@import '../../style';
+
+.block-cards {
+    &__item {
+        @extend %extend-item;
+
+        span {
+            color: $grey-2;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+@include tablet() {
+    .block-cards {
+        &__item {
+            padding: 17px 20px;
+        }
+    }
+}

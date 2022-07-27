@@ -1,0 +1,64 @@
+@import "../style/variables.scss";
+
+body {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: $bg-grey-light;
+    margin: 0 auto;
+    padding: 0 30px 100px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + (255px / 2));
+    transform: translate(-50%, -50%);
+    @include fz-19($grey-8);
+
+    &-error {
+        position: absolute;
+        top: 50%;
+        left: calc(50% + (255px / 2));
+        transform: translate(-50%, -50%);
+        @include fz-19($red);
+    }
+}
+
+@include tablet() {
+    .container {
+        padding: 0 15px 100px;
+    }
+
+    .title {
+        left: 50%;
+
+        &-error {
+            left: 50%;
+        }
+    }
+}
